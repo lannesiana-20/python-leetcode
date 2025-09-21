@@ -1,3 +1,8 @@
+'''
+给你一个整数数组 nums 和一个整数目标值 target，请你统计并返回 nums 中
+  小于目标值 target 的下标对 (i, j) 的数目。
+  下标对 (i, j) 满足 i < j 且 nums[i] + nums[j] < target
+'''
 class Solution(object):
     def countPairs(self, nums, target):
         """
