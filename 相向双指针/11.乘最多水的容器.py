@@ -7,7 +7,9 @@
 
 说明：你不能倾斜容器。
 '''
-
+'''
+思路：每次移动的是较短的那一边，因为移动较长的那一边不可能获得更大的面积
+'''
 class Solution(object):
     def maxArea(self, height):
         """
