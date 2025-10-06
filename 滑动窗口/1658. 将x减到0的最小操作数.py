@@ -24,7 +24,7 @@
 
 class Solution:
     def minOperations(self, nums: List[int], x: int) -> int:
-        # 剩余子数组之和
+        # 剩余目标想要的子数组之和
         target = sum(nums) - x
         if target < 0 :
             return -1
@@ -33,7 +33,7 @@ class Solution:
         cur_sum = left = 0
         for right , x in enumerate(nums):
             cur_sum += x
-            while cur_sum > target:
+            while cur_sum > target: #cur_sum是当前维护的滑窗的所有数之和
                 cur_sum -= nums[left]
                 left += 1   #缩小子数组长度
             if cur_sum == target:
